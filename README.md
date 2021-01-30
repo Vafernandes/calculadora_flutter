@@ -1,16 +1,46 @@
-# flutter_application
+# Calculadora em flutter
 
-A new Flutter project.
+### O intuito era converter um número em binário para decimal, porém novas funcionalidades serão adicionadas ainda.
 
-## Getting Started
+![Alt Text](gif/videoCalc.gif)
 
-This project is a starting point for a Flutter application.
+### Por mais que o Dart possua uma forma de realizar a conversão, o intuito não foi utilizar funções prontas, mas sim, treinar a lógica de programação, segue abaixo o algorítmo adotado para realizar a conversão:
 
-A few resources to get you started if this is your first Flutter project:
+```dart
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+List<String> _comandos = [];
+  int valor = 0;
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  List<String> inverterListaComandos(List<String> comandosParametro) {
+    List<String> listaComandosInvertida = [];
+
+    for (int i = (comandosParametro.length - 1); i >= 0; i--) {
+      listaComandosInvertida.add(comandosParametro[i]);
+    }
+
+    return listaComandosInvertida;
+  }
+
+  int converterBinParaDecimal() {
+    int resultadoConversao = 0;
+
+    List<String> listaInvertida = inverterListaComandos(_comandos);
+
+    for (int i = 0; i < listaInvertida.length; i++) {
+      if (int.parse(listaInvertida[i]) == 1) {
+        resultadoConversao += int.parse(listaInvertida[i]) * pow(2, i);
+      }
+    }
+    valor = resultadoConversao;
+    return resultadoConversao;
+  }
+
+```
+
+### No Dart, é possível converter Binário para Decimal da seguinute forma:
+
+```dart
+var converter = int.parse(numBinario, radix: 2).toRadixString(10);
+
+```
+
