@@ -5,9 +5,11 @@ class Botao extends StatelessWidget {
   final tituloBotao;
   final Function(String) valorPressionado;
 
-  const Botao(
-      {Key key, @required this.tituloBotao, @required this.valorPressionado})
-      : super(key: key);
+  const Botao({
+    Key key,
+    @required this.tituloBotao,
+    @required this.valorPressionado,
+  }) : super(key: key);
 
   diferenciaComando() {
     switch (tituloBotao) {

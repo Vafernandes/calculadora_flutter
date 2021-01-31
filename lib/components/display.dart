@@ -36,7 +36,7 @@ class Display extends StatelessWidget {
                 style: TextStyle(
                     decoration: TextDecoration.none,
                     fontSize: 50,
-                    color: Colors.blueGrey),
+                    color: Colors.black54),
               ),
             ),
           ],
