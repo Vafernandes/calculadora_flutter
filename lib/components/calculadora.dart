@@ -27,7 +27,7 @@ class _Calculadora extends State<Calculadora> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
+      color: Colors.grey[100],
       child: Column(
         children: [
           Display(

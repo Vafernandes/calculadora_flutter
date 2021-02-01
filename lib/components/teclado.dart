@@ -11,50 +11,52 @@ class Teclado extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       flex: 1,
-      child: Container(
-        color: Colors.grey[50],
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            ButtonRow(
-              botoes: [
-                Botao(tituloBotao: 'C', valorPressionado: valorPressionado),
-                Botao(tituloBotao: 'BIN', valorPressionado: valorPressionado),
-                Botao(tituloBotao: '%', valorPressionado: valorPressionado),
-                Botao(tituloBotao: '/', valorPressionado: valorPressionado),
-              ],
-            ),
-            ButtonRow(
-              botoes: [
-                Botao(tituloBotao: '7', valorPressionado: valorPressionado),
-                Botao(tituloBotao: '8', valorPressionado: valorPressionado),
-                Botao(tituloBotao: '9', valorPressionado: valorPressionado),
-                Botao(tituloBotao: 'X', valorPressionado: valorPressionado),
-              ],
-            ),
-            ButtonRow(
-              botoes: [
-                Botao(tituloBotao: '4', valorPressionado: valorPressionado),
-                Botao(tituloBotao: '5', valorPressionado: valorPressionado),
-                Botao(tituloBotao: '6', valorPressionado: valorPressionado),
-                Botao(tituloBotao: '-', valorPressionado: valorPressionado),
-              ],
-            ),
-            ButtonRow(
-              botoes: [
-                Botao(tituloBotao: '1', valorPressionado: valorPressionado),
-                Botao(tituloBotao: '2', valorPressionado: valorPressionado),
-                Botao(tituloBotao: '3', valorPressionado: valorPressionado),
-                Botao(tituloBotao: '+', valorPressionado: valorPressionado),
-              ],
-            ),
-            ButtonRow(
-              botoes: [
-                Botao(tituloBotao: '0', valorPressionado: valorPressionado),
-                Botao(tituloBotao: '=', valorPressionado: valorPressionado),
-              ],
-            ),
-          ],
+      child: Padding(
+        padding: const EdgeInsets.all(12),
+        child: Container(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              ButtonRow(
+                botoes: [
+                  Botao(tituloBotao: 'C', valorPressionado: valorPressionado),
+                  Botao(tituloBotao: 'BIN', valorPressionado: valorPressionado),
+                  Botao(tituloBotao: '%', valorPressionado: valorPressionado),
+                  Botao(tituloBotao: '/', valorPressionado: valorPressionado),
+                ],
+              ),
+              ButtonRow(
+                botoes: [
+                  Botao(tituloBotao: '7', valorPressionado: valorPressionado),
+                  Botao(tituloBotao: '8', valorPressionado: valorPressionado),
+                  Botao(tituloBotao: '9', valorPressionado: valorPressionado),
+                  Botao(tituloBotao: 'X', valorPressionado: valorPressionado),
+                ],
+              ),
+              ButtonRow(
+                botoes: [
+                  Botao(tituloBotao: '4', valorPressionado: valorPressionado),
+                  Botao(tituloBotao: '5', valorPressionado: valorPressionado),
+                  Botao(tituloBotao: '6', valorPressionado: valorPressionado),
+                  Botao(tituloBotao: '-', valorPressionado: valorPressionado),
+                ],
+              ),
+              ButtonRow(
+                botoes: [
+                  Botao(tituloBotao: '1', valorPressionado: valorPressionado),
+                  Botao(tituloBotao: '2', valorPressionado: valorPressionado),
+                  Botao(tituloBotao: '3', valorPressionado: valorPressionado),
+                  Botao(tituloBotao: '+', valorPressionado: valorPressionado),
+                ],
+              ),
+              ButtonRow(
+                botoes: [
+                  Botao(tituloBotao: '0', valorPressionado: valorPressionado),
+                  Botao(tituloBotao: '=', valorPressionado: valorPressionado),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
