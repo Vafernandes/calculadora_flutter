@@ -12,6 +12,7 @@ class Display extends StatelessWidget {
     return Expanded(
       flex: 1,
       child: Container(
+        color: Colors.grey[50],
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         child: Column(
@@ -19,25 +20,25 @@ class Display extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(20),
               child: Text(
                 '$numeroDigitado',
                 style: TextStyle(
                   decoration: TextDecoration.none,
                   fontWeight: FontWeight.w200,
-                  fontSize: 40,
+                  fontSize: 60,
                   color: Colors.black26,
                 ),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(20),
               child: Text(
                 '$resultado',
                 style: TextStyle(
                     decoration: TextDecoration.none,
                     fontWeight: FontWeight.w200,
-                    fontSize: 50,
+                    fontSize: 90,
                     color: Colors.black54),
               ),
             ),

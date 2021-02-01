@@ -48,10 +48,14 @@ class Botao extends StatelessWidget {
     return Expanded(
       flex: 1,
       child: Padding(
-        padding: const EdgeInsets.all(0.5),
+        padding: const EdgeInsets.all(7),
         child: Container(
           height: MediaQuery.of(context).size.height,
           child: RaisedButton(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30),
+            ),
+            elevation: 8,
             color: Colors.white,
             child: Text(
               tituloBotao,

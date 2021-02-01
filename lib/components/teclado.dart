@@ -12,6 +12,7 @@ class Teclado extends StatelessWidget {
     return Expanded(
       flex: 1,
       child: Container(
+        color: Colors.grey[50],
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
