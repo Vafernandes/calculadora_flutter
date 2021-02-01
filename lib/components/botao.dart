@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application/calc/converte_binario.dart';
+import 'package:flutter_application/calc/calculadora_converte_binario.dart';
 
 class Botao extends StatelessWidget {
   final tituloBotao;
@@ -11,18 +11,36 @@ class Botao extends StatelessWidget {
     @required this.valorPressionado,
   }) : super(key: key);
 
-  diferenciaComando() {
-    switch (tituloBotao) {
+  void _diferenciaComando(String valorBotao) {
+    switch (valorBotao) {
       case 'BIN':
-        ConverteBinario.instanciaConverterBinario.converterBinParaDecimal();
+        CalculadoraConverteBinario.instanciaConverterBinario
+            .converterBinParaDecimal();
         break;
-      case 'Clear':
-        ConverteBinario.instanciaConverterBinario.limpar();
+      case 'C':
+        CalculadoraConverteBinario.instanciaConverterBinario.limpar();
+        break;
+      case '=':
+        CalculadoraConverteBinario.instanciaConverterBinario
+            .diferenciaOperacao();
         break;
       default:
-        ConverteBinario.instanciaConverterBinario
+        CalculadoraConverteBinario.instanciaConverterBinario
             .adicionarElementoNaListaComandos(tituloBotao);
     }
+  }
+
+  bool _isCaracterEspecial() {
+    return (tituloBotao == 'BIN' ||
+            tituloBotao == 'C' ||
+            tituloBotao == '%' ||
+            tituloBotao == 'X' ||
+            tituloBotao == '-' ||
+            tituloBotao == '/' ||
+            tituloBotao == '+' ||
+            tituloBotao == '=')
+        ? true
+        : false;
   }
 
   @override
@@ -34,18 +52,19 @@ class Botao extends StatelessWidget {
         child: Container(
           height: MediaQuery.of(context).size.height,
           child: RaisedButton(
-            color: (tituloBotao == 'BIN' || tituloBotao == 'Clear')
-                ? Colors.orange[800]
-                : Colors.white,
+            color: Colors.white,
             child: Text(
               tituloBotao,
               style: TextStyle(
-                fontWeight: FontWeight.w200,
+                fontWeight:
+                    (_isCaracterEspecial()) ? FontWeight.w400 : FontWeight.w200,
                 fontSize: 32,
+                color:
+                    (_isCaracterEspecial()) ? Colors.orange[800] : Colors.black,
               ),
             ),
             onPressed: () {
-              diferenciaComando();
+              _diferenciaComando(tituloBotao);
               valorPressionado(tituloBotao);
             },
           ),

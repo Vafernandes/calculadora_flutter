@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application/calc/converte_binario.dart';
+import 'package:flutter_application/calc/calculadora_converte_binario.dart';
 import 'package:flutter_application/components/display.dart';
 import 'package:flutter_application/components/teclado.dart';
 import 'package:flutter_application/controller/dado_display.dart';
@@ -14,12 +14,12 @@ class _Calculadora extends State<Calculadora> {
   var valor = 0;
   _onPressed(String comando) {
     setState(() {
-      if (comando == 'Clear') {
+      if (comando == 'C') {
         dadoDisplay.setValor('');
         valor = 0;
       } else {
         dadoDisplay.alterarValor(comando);
-        valor = ConverteBinario.instanciaConverterBinario.valor;
+        valor = CalculadoraConverteBinario.instanciaConverterBinario.valor;
       }
     });
   }

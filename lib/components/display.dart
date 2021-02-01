@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Display extends StatelessWidget {
   final String numeroDigitado;
-  final int resultado;
+  final resultado;
 
   const Display({Key key, this.numeroDigitado, this.resultado})
       : super(key: key);
@@ -24,7 +24,8 @@ class Display extends StatelessWidget {
                 '$numeroDigitado',
                 style: TextStyle(
                   decoration: TextDecoration.none,
-                  //fontSize: 30,
+                  fontWeight: FontWeight.w200,
+                  fontSize: 40,
                   color: Colors.black26,
                 ),
               ),
@@ -35,6 +36,7 @@ class Display extends StatelessWidget {
                 '$resultado',
                 style: TextStyle(
                     decoration: TextDecoration.none,
+                    fontWeight: FontWeight.w200,
                     fontSize: 50,
                     color: Colors.black54),
               ),

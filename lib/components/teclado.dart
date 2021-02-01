@@ -17,8 +17,10 @@ class Teclado extends StatelessWidget {
           children: [
             ButtonRow(
               botoes: [
+                Botao(tituloBotao: 'C', valorPressionado: valorPressionado),
                 Botao(tituloBotao: 'BIN', valorPressionado: valorPressionado),
-                Botao(tituloBotao: 'Clear', valorPressionado: valorPressionado),
+                Botao(tituloBotao: '%', valorPressionado: valorPressionado),
+                Botao(tituloBotao: '/', valorPressionado: valorPressionado),
               ],
             ),
             ButtonRow(
@@ -26,6 +28,7 @@ class Teclado extends StatelessWidget {
                 Botao(tituloBotao: '7', valorPressionado: valorPressionado),
                 Botao(tituloBotao: '8', valorPressionado: valorPressionado),
                 Botao(tituloBotao: '9', valorPressionado: valorPressionado),
+                Botao(tituloBotao: 'X', valorPressionado: valorPressionado),
               ],
             ),
             ButtonRow(
@@ -33,6 +36,7 @@ class Teclado extends StatelessWidget {
                 Botao(tituloBotao: '4', valorPressionado: valorPressionado),
                 Botao(tituloBotao: '5', valorPressionado: valorPressionado),
                 Botao(tituloBotao: '6', valorPressionado: valorPressionado),
+                Botao(tituloBotao: '-', valorPressionado: valorPressionado),
               ],
             ),
             ButtonRow(
@@ -40,11 +44,13 @@ class Teclado extends StatelessWidget {
                 Botao(tituloBotao: '1', valorPressionado: valorPressionado),
                 Botao(tituloBotao: '2', valorPressionado: valorPressionado),
                 Botao(tituloBotao: '3', valorPressionado: valorPressionado),
+                Botao(tituloBotao: '+', valorPressionado: valorPressionado),
               ],
             ),
             ButtonRow(
               botoes: [
                 Botao(tituloBotao: '0', valorPressionado: valorPressionado),
+                Botao(tituloBotao: '=', valorPressionado: valorPressionado),
               ],
             ),
           ],
